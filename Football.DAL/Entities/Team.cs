@@ -15,15 +15,20 @@ namespace Football.DAL.Entities
 		public int Victories { get; set; }
 		public int Looses { get; set; }
 		public int Draws { get; set; }
+		public int ScoredGoals { get; set; }
+		public int LoosedGoals { get; set; }
 
 		public override string ToString() {
-			return @$"{Id}: {Name} [
+			return @$"{Id}: {Name} {{
 	City: {City}
+	-
+	ScoredGoals: {ScoredGoals} 
+	LoosedGoals: {LoosedGoals}
 	-
 	Victories: {Victories}
 	Looses: {Looses}
 	Draws: {Draws}
-]";
+}}";
 		}
 	}
 }
